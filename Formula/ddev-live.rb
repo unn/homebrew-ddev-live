@@ -7,8 +7,6 @@ class DdevLive < Formula
 
   def install
     bin.install "ddev-live"
-    bash_completion.install "ddev-live_completion_bash.sh" => "ddev-live"
-    zsh_completion.install "ddev-live_completion_zsh.sh" => "ddev-live"
   end
 
   test do
