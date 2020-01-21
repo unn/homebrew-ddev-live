@@ -5,7 +5,11 @@ class DdevLive < Formula
   version "0.3.0"
   sha256 "bc8318e2b0c0ff21fba913ec3b89a2637476016417be8530c002abf449c5fe0e"
 
-  bottle :unneeded
+  bottle do
+    root_url "https://downloads.ddev.com/ddev-live-cli/v0.3.0/"
+    cellar :any_skip_relocation
+    sha256 "05fbdc831ac947085e2e742cf09967ac2bca0cea84f31c7895ab2922437f574c" => :x86_64_linux
+  end
 
   def install
     bin.install "ddev-live"
